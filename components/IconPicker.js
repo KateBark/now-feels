@@ -5,11 +5,11 @@ export default function IconPicker({ icons, selected, setSelected }) {
         <button
           key={icon.id}
           onClick={() => setSelected(icon)}
-          className={`text-xl sm:text-2xl p-2 sm:p-3 rounded-lg border border-[#E5E7EB]
+          className={`p-0 rounded-lg overflow-hidden border border-[#E5E7EB] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center
             ${
               selected?.id === icon.id
-                ? "bg-[#A3B18A] text-white"
-                : "bg-white text-[#1F2933] hover:bg-[#F5F4F2]"
+                ? "ring-2 ring-[#A3B18A]"
+                : "bg-transparent hover:bg-[#F5F4F2]"
             }
           `}
         >
@@ -17,10 +17,10 @@ export default function IconPicker({ icons, selected, setSelected }) {
             <img
               src={icon.src}
               alt={icon.alt || icon.id}
-              className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+              className="w-full h-full object-cover"
             />
           ) : (
-            icon.label
+            <span className="text-sm px-2">{icon.label}</span>
           )}
         </button>
       ))}
