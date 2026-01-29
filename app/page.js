@@ -26,6 +26,7 @@ export default function Home() {
       words: selectedWords,
       icon: selectedIcon.label,
       public: isPublic,
+      timestamp: new Date().toISOString(),
     };
 
     if (isPublic) {
@@ -39,8 +40,10 @@ export default function Home() {
   }
 
   return (
-    <main className="max-w-xl mx-auto p-6 space-y-8">
-      <h1 className="text-3xl font-semibold">Five Words</h1>
+    <main className="min-h-screen bg-neutral-50 p-4 sm:p-6 md:p-8 lg:max-w-2xl lg:mx-auto space-y-6 sm:space-y-8">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+        Now feels...
+      </h1>
 
       <WordPicker
         words={WORDS}
@@ -54,14 +57,14 @@ export default function Home() {
         setSelected={setSelectedIcon}
       />
 
-      <label className="flex items-center gap-2 mt-4">
+      {/* <label className="flex items-center gap-2 mt-4">
         <input
           type="checkbox"
           checked={isPublic}
           onChange={() => setIsPublic(!isPublic)}
         />
         Share publicly (anonymous)
-      </label>
+      </label> */}
 
       <button
         onClick={submitPost}
@@ -71,8 +74,8 @@ export default function Home() {
         Post
       </button>
 
-      <section className="space-y-4">
-        <h2 className="text-xl font-medium">Public feed</h2>
+      <section className="space-y-3 sm:space-y-4">
+        <h2 className="text-lg sm:text-xl font-medium">Public feed</h2>
         {feed.length === 0 && (
           <p className="text-neutral-500 text-sm">No posts yet.</p>
         )}
