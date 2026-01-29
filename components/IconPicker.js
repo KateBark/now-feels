@@ -1,11 +1,11 @@
 export default function IconPicker({ icons, selected, setSelected }) {
   return (
-    <div className="flex gap-3 mt-4">
+    <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
       {icons.map((icon) => (
         <button
           key={icon.id}
           onClick={() => setSelected(icon)}
-          className={`text-2xl p-3 rounded-lg border
+          className={`text-xl sm:text-2xl p-2 sm:p-3 rounded-lg border
             ${
               selected?.id === icon.id
                 ? "bg-black text-white"
