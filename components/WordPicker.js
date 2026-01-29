@@ -9,7 +9,7 @@ export default function WordPicker({ words, selected, setSelected }) {
 
   return (
     <div>
-      <p className="mb-2 text-sm text-neutral-600">
+      <p className="mb-2 text-sm text-[#6B7280]">
         Pick up to 5 words ({selected.length}/5)
       </p>
 
@@ -18,11 +18,11 @@ export default function WordPicker({ words, selected, setSelected }) {
           <button
             key={word}
             onClick={() => toggleWord(word)}
-            className={`px-3 py-1 rounded-full border text-sm
+            className={`px-3 py-1 rounded-full border border-[#E5E7EB] text-sm
               ${
                 selected.includes(word)
-                  ? "bg-black text-white"
-                  : "bg-white hover:bg-neutral-200"
+                  ? "bg-[#A3B18A] text-white"
+                  : "bg-white text-[#1F2933] hover:bg-[#F5F4F2]"
               }
             `}
           >

@@ -3,13 +3,13 @@ export default function PostCard({ post }) {
   const formatted = date ? date.toLocaleString() : "";
 
   return (
-    <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm border">
+    <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm border-[#E5E7EB]">
       <div className="flex justify-between items-start gap-2 mb-2 sm:mb-3">
         <div className="text-2xl sm:text-3xl md:text-4xl shrink-0">
           {post.icon}
         </div>
         {formatted && (
-          <div className="text-xs sm:text-sm text-neutral-500 text-right shrink-0">
+          <div className="text-xs sm:text-sm text-[#6B7280] text-right shrink-0">
             {formatted}
           </div>
         )}
@@ -19,7 +19,7 @@ export default function PostCard({ post }) {
         {post.words.map((word) => (
           <span
             key={word}
-            className="px-2 py-1 bg-neutral-200 rounded-full text-xs sm:text-sm"
+            className="px-2 py-1 bg-[#E5E7EB] rounded-full text-xs sm:text-sm text-[#1F2933]"
           >
             {word}
           </span>

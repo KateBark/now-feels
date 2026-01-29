@@ -40,8 +40,8 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-neutral-50 p-4 sm:p-6 md:p-8 lg:max-w-2xl lg:mx-auto space-y-6 sm:space-y-8">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+    <main className="min-h-screen bg-[#F5F4F2] p-4 sm:p-6 md:p-8 lg:max-w-2xl lg:mx-auto space-y-6 sm:space-y-8">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1F2933]">
         Now feels...
       </h1>
 
@@ -68,16 +68,18 @@ export default function Home() {
 
       <button
         onClick={submitPost}
-        className="w-full bg-black text-white py-3 rounded-xl mt-4 disabled:opacity-40"
+        className="w-full bg-[#A3B18A] text-white py-3 rounded-xl mt-4 disabled:opacity-40 hover:bg-[#8fa176] transition-colors"
         disabled={selectedWords.length === 0 || !selectedIcon}
       >
         Post
       </button>
 
       <section className="space-y-3 sm:space-y-4">
-        <h2 className="text-lg sm:text-xl font-medium">Public feed</h2>
+        <h2 className="text-lg sm:text-xl font-medium text-[#1F2933]">
+          Public feed
+        </h2>
         {feed.length === 0 && (
-          <p className="text-neutral-500 text-sm">No posts yet.</p>
+          <p className="text-[#6B7280] text-sm">No posts yet.</p>
         )}
         {feed.map((post) => (
           <PostCard key={post.id} post={post} />
