@@ -24,7 +24,7 @@ export default function Home() {
     const newPost = {
       id: Date.now(),
       words: selectedWords,
-      icon: selectedIcon.label,
+      icon: selectedIcon,
       public: isPublic,
       timestamp: new Date().toISOString(),
     };

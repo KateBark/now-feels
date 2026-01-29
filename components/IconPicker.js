@@ -13,7 +13,15 @@ export default function IconPicker({ icons, selected, setSelected }) {
             }
           `}
         >
-          {icon.label}
+          {icon.src ? (
+            <img
+              src={icon.src}
+              alt={icon.alt || icon.id}
+              className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+            />
+          ) : (
+            icon.label
+          )}
         </button>
       ))}
     </div>

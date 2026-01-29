@@ -6,7 +6,15 @@ export default function PostCard({ post }) {
     <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm border-[#E5E7EB]">
       <div className="flex justify-between items-start gap-2 mb-2 sm:mb-3">
         <div className="text-2xl sm:text-3xl md:text-4xl shrink-0">
-          {post.icon}
+          {post.icon && post.icon.src ? (
+            <img
+              src={post.icon.src}
+              alt={post.icon.alt || post.icon.id || "icon"}
+              className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+            />
+          ) : (
+            post.icon
+          )}
         </div>
         {formatted && (
           <div className="text-xs sm:text-sm text-[#6B7280] text-right shrink-0">
