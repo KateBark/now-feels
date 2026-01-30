@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Five Words",
+  title: "Now Feels",
   description: "Say how you feel in five words and one symbol",
 };
 

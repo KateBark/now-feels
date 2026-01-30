@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#F5F4F2] p-4 sm:p-6 md:p-8 lg:max-w-2xl lg:mx-auto space-y-6 sm:space-y-8">
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1F2933]">
-        Now feels...
+        Now feels like...
       </h1>
 
       <WordPicker
