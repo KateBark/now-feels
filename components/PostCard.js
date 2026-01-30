@@ -10,7 +10,7 @@ export default function PostCard({ post }) {
             <img
               src={post.icon.src}
               alt={post.icon.alt || post.icon.id || "icon"}
-              className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+              className="w-16 h-16 sm:w-10 sm:h-10 object-cover rounded-lg"
             />
           ) : (
             post.icon

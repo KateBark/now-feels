@@ -75,9 +75,9 @@ export default function Home() {
       </button>
 
       <section className="space-y-3 sm:space-y-4">
-        <h2 className="text-lg sm:text-xl font-medium text-[#1F2933]">
+        {/* <h2 className="text-lg sm:text-xl font-medium text-[#1F2933]">
           Public feed
-        </h2>
+        </h2> */}
         {feed.length === 0 && (
           <p className="text-[#6B7280] text-sm">No posts yet.</p>
         )}
