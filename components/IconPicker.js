@@ -3,7 +3,7 @@ export default function IconPicker({ icons, selected, setSelected }) {
     <div>
       <p className="mb-2 text-sm text-[#6B7280]">Pick an image</p>
 
-      <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
+      <div className="grid grid-cols-6 gap-2 sm:gap-3 mt-4">
         {icons.map((icon) => (
           <button
             key={icon.id}
